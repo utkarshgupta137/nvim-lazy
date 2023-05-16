@@ -6,3 +6,5 @@ debug
 foo.*
 *.log
 data
+lazy-lock.json
+lua/plugins/sqlite.lua
