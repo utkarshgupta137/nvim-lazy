@@ -31,6 +31,7 @@ map({ "n", "v" }, "<C-d>", "zz<C-d>")
 map({ "n", "v", "i" }, "<C-r>", "<cmd>w<cr><esc><cmd>source<cr>", { desc = "Save & Source File" })
 
 map("n", "<M-f>", "<cmd>ToggleDeco<cr>", { desc = "Toggle Indents & Rainbow" })
+map("n", "<leader>nr", vim.diagnostic.reset, { desc = "Reset Diagnostics" })
 
 map("n", "<leader>C", "<C-w>c", { desc = "Close Window" })
 
