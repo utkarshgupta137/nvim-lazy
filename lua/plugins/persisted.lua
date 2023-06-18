@@ -1,7 +1,7 @@
 return {
   "olimorris/persisted.nvim",
   dependencies = {
-    "utkarshgupta137/bufferline.nvim",
+    "akinsho/bufferline.nvim",
   },
   init = function() require("telescope").load_extension("persisted") end,
   event = "VeryLazy",

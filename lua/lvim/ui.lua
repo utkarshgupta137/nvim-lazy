@@ -13,8 +13,7 @@ return {
   },
 
   {
-    "utkarshgupta137/bufferline.nvim",
-    branch = "feat/move_to_wraps",
+    "akinsho/bufferline.nvim",
     keys = {
       { "<b", "<cmd>BufferLineMovePrev<cr>", desc = "Move Buffer Left" },
       { "<leader>bh", "<cmd>BufferLineMovePrev<cr>", desc = "Move Buffer Left" },
