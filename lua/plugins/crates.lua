@@ -27,6 +27,9 @@ return {
     { "RCf", '<cmd>lua require("crates").show_features_popup()<cr>', desc = "Show Features" },
     { "RCd", '<cmd>lua require("crates").show_dependencies_popup()<cr>', desc = "Show Dependencies" },
 
+    { "RCe", '<cmd>lua require("crates").expand_plain_crate_to_inline_table()<cr>', desc = "Expand Crate" },
+    { "RCE", '<cmd>lua require("crates").extract_crate_into_table()<cr>', desc = "Extract Crate" },
+
     { "RCu", '<cmd>lua require("crates").update_crate()<cr>', desc = "Update Crate" },
     { "RCu", '<cmd>lua require("crates").update_crates()<cr>', desc = "Update Crates", mode = "v" },
     { "RCa", '<cmd>lua require("crates").update_all_crates()<cr>', desc = "Update All Crates" },
