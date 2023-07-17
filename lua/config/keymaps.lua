@@ -21,6 +21,8 @@ map({ "n", "v" }, "_", "-")
 map({ "n", "v" }, "-", "$")
 map({ "n", "v" }, "=", "%")
 
+map({ "n", "v" }, "[[", "{", { desc = "Previous empty line" })
+map({ "n", "v" }, "]]", "}", { desc = "Next empty line" })
 map({ "n", "v" }, "gg", "gg_")
 map({ "n", "v" }, "n", "nzz")
 map({ "n", "v" }, "N", "Nzz")
