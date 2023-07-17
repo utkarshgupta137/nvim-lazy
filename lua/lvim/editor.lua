@@ -173,7 +173,6 @@ return {
         sorting_strategy = "ascending",
       },
       pickers = {
-        diagnostics = { path_display = { "smart" } },
         lsp_references = { path_display = { "smart" } },
         lsp_definitions = { path_display = { "smart" } },
         lsp_type_definitions = { path_display = { "smart" } },

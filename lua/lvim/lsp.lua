@@ -5,6 +5,10 @@ return {
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       keys[1][1] = "<leader>ld"
       keys[2][1] = "<leader>li"
+      keys[3][2] = "<cmd>Telescope lsp_definitions fname_width=64<cr>"
+      keys[4][2] = "<cmd>Telescope lsp_references fname_width=64<cr>"
+      keys[6][2] = "<cmd>Telescope lsp_implementations fname_width=64<cr>"
+      keys[7][2] = "<cmd>Telescope lsp_type_definitions fname_width=64<cr>"
       keys[#keys - 4][1] = "<leader>lf"
       keys[#keys - 3][1] = "<leader>lf"
       keys[#keys - 2][1] = "<leader>la"
