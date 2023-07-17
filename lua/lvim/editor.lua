@@ -171,6 +171,7 @@ return {
           preview_cutoff = 0,
         },
         sorting_strategy = "ascending",
+        selection_strategy = "follow",
       },
       pickers = {
         lsp_references = { path_display = { "smart" } },
