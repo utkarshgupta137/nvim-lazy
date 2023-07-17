@@ -28,7 +28,13 @@ return {
       servers = {
         bashls = {},
         marksman = {},
-        pyright = {},
+        pyright = {
+          settings = {
+            python = {
+              pythonPath = vim.g.python3_host_prog,
+            },
+          },
+        },
         rnix = {},
         ruff_lsp = {},
         rust_analyzer = {},
