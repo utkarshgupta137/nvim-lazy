@@ -1,15 +1,30 @@
 return {
-  "utkarshgupta137/nvim-lightbulb",
+  "kosayoda/nvim-lightbulb",
   event = "LspAttach",
   opts = {
-    sign = {
-      -- Priority of the gutter sign
-      priority = 100,
-    },
+    -- Priority of the lightbulb for all handlers except float.
+    priority = 100,
+
+    -- Code action kinds to observe.
+    -- To match all code actions, set to `nil`.
+    -- Otherwise, set to a table of kinds.
+    -- Example: { "quickfix", "refactor.rewrite" }
+    -- See: https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#codeActionKind
+    action_kinds = { "quickfix" },
+
+    -- Autocmd configuration.
+    -- If enabled, automatically defines an autocmd to show the lightbulb.
+    -- If disabled, you will have to manually call |NvimLightbulb.update_lightbulb|.
+    -- Only works if configured during NvimLightbulb.setup
     autocmd = {
+      -- Whether or not to enable autocmd creation.
       enabled = true,
     },
-    -- Only show the lightbulb if the code action is a "quickfix" action (blue lightbulb in VSCode)
-    quickfix_only = true,
+
+    -- Scenarios to not show a lightbulb.
+    ignore = {
+      -- Ignore code actions without a `kind` like refactor.rewrite, quickfix.
+      actions_without_kind = true,
+    },
   },
 }
