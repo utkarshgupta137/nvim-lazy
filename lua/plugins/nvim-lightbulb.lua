@@ -23,6 +23,9 @@ return {
 
     -- Scenarios to not show a lightbulb.
     ignore = {
+      -- LSP client names to ignore.
+      -- Example: {"null-ls", "lua_ls"}
+      clients = { "marksman" },
       -- Ignore code actions without a `kind` like refactor.rewrite, quickfix.
       actions_without_kind = true,
     },
