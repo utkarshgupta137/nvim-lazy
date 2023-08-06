@@ -34,6 +34,7 @@ return {
       options = {
         tab_size = 0,
         show_buffer_close_icons = false,
+        persist_buffer_sort = false, -- whether or not custom sorted buffers should persist
         move_wraps_at_ends = true, -- whether or not move command "cycles" at the first or last position
         -- can also be a table containing 2 custom separators
         -- [focused and unfocused]. eg: { '|', '|' }
