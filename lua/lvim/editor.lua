@@ -3,6 +3,7 @@ local Util = require("lazyvim.util")
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    commit = "7951701fd21291ac473ea92d3fd57ec5c8bf10bb",
     keys = {
       { "<leader>e", "<cmd>Neotree toggle show<cr>", desc = "Toggle Explorer" },
       { "<leader>E", "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
