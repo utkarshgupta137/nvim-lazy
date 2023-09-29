@@ -64,6 +64,7 @@ return {
       vim.list_extend(opts.sources, {
         -- dprint
         nls.builtins.formatting.dprint.with({
+          extra_filetypes = { "yaml" },
           disabled_filetypes = { "rust" },
         }),
 
@@ -75,9 +76,6 @@ return {
         nls.builtins.code_actions.shellcheck,
         nls.builtins.diagnostics.shellcheck,
         nls.builtins.formatting.shellharden,
-
-        -- toml
-        nls.builtins.formatting.taplo,
 
         -- yaml
         nls.builtins.diagnostics.actionlint,
