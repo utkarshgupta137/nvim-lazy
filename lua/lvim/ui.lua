@@ -44,6 +44,18 @@ return {
     },
   },
 
+  -- indent guides for Neovim
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      indent = {
+        highlight = {
+          "IndentBlanklineChar",
+        },
+      },
+    },
+  },
+
   {
     "echasnovski/mini.indentscope",
     opts = {

@@ -8,6 +8,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 vim.api.nvim_create_user_command("ToggleDeco", function()
-  vim.cmd("IndentBlanklineToggle")
+  vim.cmd("IBLToggle")
   vim.cmd("TSToggle rainbow")
 end, { desc = "Toggle Indents & Rainbow" })
