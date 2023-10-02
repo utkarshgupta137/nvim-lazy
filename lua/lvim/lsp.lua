@@ -9,8 +9,6 @@ return {
       keys[4][2] = "<cmd>Telescope lsp_references fname_width=64<cr>"
       keys[6][2] = "<cmd>Telescope lsp_implementations fname_width=64<cr>"
       keys[7][2] = "<cmd>Telescope lsp_type_definitions fname_width=64<cr>"
-      keys[#keys - 4][1] = "<leader>lf"
-      keys[#keys - 3][1] = "<leader>lf"
       keys[#keys - 2][1] = "<leader>la"
       keys[#keys - 1][1] = "<leader>lA"
       keys[#keys - 0][1] = "<leader>lr"
