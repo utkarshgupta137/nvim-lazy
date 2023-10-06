@@ -1,5 +1,5 @@
 return {
-  "Saecki/crates.nvim",
+  "saecki/crates.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   init = function()
     vim.api.nvim_create_autocmd("BufRead", {
@@ -15,14 +15,16 @@ return {
             { name = "path" },
           },
         })
-        require("crates")
       end,
     })
   end,
+  event = { "BufRead Cargo.toml" },
   keys = {
     { "RCt", '<cmd>lua require("crates").toggle()<cr>', desc = "Toggle" },
+    { "RCp", '<cmd>lua require("crates").update()<cr>', desc = "Update" },
     { "RCr", '<cmd>lua require("crates").reload()<cr>', desc = "Reload" },
 
+    { "RCc", '<cmd>lua require("crates").show_crate_popup()<cr>', desc = "Show Crate" },
     { "RCv", '<cmd>lua require("crates").show_versions_popup()<cr>', desc = "Show Versions" },
     { "RCf", '<cmd>lua require("crates").show_features_popup()<cr>', desc = "Show Features" },
     { "RCd", '<cmd>lua require("crates").show_dependencies_popup()<cr>', desc = "Show Dependencies" },
