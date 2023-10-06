@@ -196,6 +196,7 @@ return {
       opts.defaults["<leader>S"] = { name = "+session" }
       opts.defaults["R"] = { name = "+rust" }
       opts.defaults["RC"] = { name = "+crates" }
+      opts.defaults["s"] = { name = "+surround" }
       opts.defaults["gs"] = { name = "+splitjoin" }
       opts.defaults["gt"] = { name = "+text-case (word)" }
       opts.defaults["go"] = { name = "+text-case (operator)" }
