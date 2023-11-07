@@ -19,7 +19,7 @@ return {
       }
       keys[#keys + 1] = { "<leader>ln", "<cmd>ConformInfo<cr>", desc = "Confirm Info" }
     end,
-    dependencies = { "MunifTanjim/rust-tools.nvim", branch = "patched" },
+    dependencies = { "simrat39/rust-tools.nvim", branch = "patched" },
     ---@class PluginLspOpts
     opts = {
       ---@type lspconfig.options
