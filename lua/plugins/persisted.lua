@@ -2,6 +2,7 @@ return {
   "olimorris/persisted.nvim",
   dependencies = {
     "akinsho/bufferline.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
   },
   init = function() require("telescope").load_extension("persisted") end,
   event = "VeryLazy",
@@ -23,6 +24,6 @@ return {
   },
   config = function(_, opts)
     require("persisted").setup(opts)
-    vim.cmd("Neotree toggle show")
+    vim.fn.timer_start(250, function() vim.cmd("Neotree toggle show") end)
   end,
 }
