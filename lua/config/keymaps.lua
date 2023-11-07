@@ -59,14 +59,14 @@ map("v", "<leader>r", 'y:%sno/<C-r>"/<C-r>"/gI<Left><Left><Left>', { desc = "Sea
 map(
   "n",
   "<leader>gg",
-  function() Util.float_term({ "lazygit" }, { esc_esc = false, size = { width = 0.98, height = 0.95 }, cwd = Util.get_root() }) end,
+  function() Util.terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, size = { width = 0.98, height = 0.95 }, cwd = Util.root() }) end,
   { desc = "Lazygit (root dir)" }
 )
 -- stylua: ignore
 map(
   "n",
   "<leader>gG",
-  function() Util.float_term({ "lazygit" }, { esc_esc = false, size = { width = 0.98, height = 0.95 } }) end,
+  function() Util.terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, size = { width = 0.98, height = 0.95 } }) end,
   { desc = "Lazygit (cwd)" }
 )
 
