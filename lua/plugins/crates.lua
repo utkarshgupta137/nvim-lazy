@@ -44,10 +44,4 @@ return {
     { "RCD", '<cmd>lua require("crates").open_documentation()<cr>', desc = "Open Documentation" },
     { "RCC", '<cmd>lua require("crates").open_crates_io()<cr>', desc = "Open Crates.io" },
   },
-  opts = {
-    null_ls = {
-      enabled = true,
-      name = "crates.nvim",
-    },
-  },
 }
