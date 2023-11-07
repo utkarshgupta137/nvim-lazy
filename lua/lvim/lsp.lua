@@ -17,7 +17,7 @@ return {
         function() vim.lsp.buf.code_action({ context = { only = { "quickfix" } }, apply = true }) end,
         desc = "QuickFix Code Action",
       }
-      keys[#keys + 1] = { "<leader>ln", "<cmd>NullLsInfo<cr>", desc = "NullLs Info" }
+      keys[#keys + 1] = { "<leader>ln", "<cmd>ConformInfo<cr>", desc = "Confirm Info" }
     end,
     dependencies = { "MunifTanjim/rust-tools.nvim", branch = "patched" },
     ---@class PluginLspOpts
@@ -53,32 +53,6 @@ return {
       { "<leader>nc", "<cmd>Neoconf local<cr>", desc = "Neoconf (local)" },
       { "<leader>nC", "<cmd>Neoconf global<cr>", desc = "Neoconf (global)" },
     },
-  },
-
-  {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      vim.list_extend(opts.sources, {
-        -- dprint
-        nls.builtins.formatting.dprint.with({
-          extra_filetypes = { "yaml" },
-          disabled_filetypes = { "rust" },
-        }),
-
-        -- python
-        nls.builtins.formatting.black,
-        nls.builtins.formatting.isort,
-
-        -- sh
-        nls.builtins.code_actions.shellcheck,
-        nls.builtins.diagnostics.shellcheck,
-        nls.builtins.formatting.shellharden,
-
-        -- yaml
-        nls.builtins.diagnostics.actionlint,
-      })
-    end,
   },
 
   {
