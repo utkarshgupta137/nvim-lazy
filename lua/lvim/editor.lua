@@ -70,8 +70,11 @@ return {
       -- Ref: https://github.com/AstroNvim/AstroNvim/blob/main/lua/plugins/neo-tree.lua
       commands = {
         system_open = function(state)
+          -- TODO: just use vim.ui.open when dropping support for Neovim <0.10
           -- Ref: https://github.com/AstroNvim/AstroNvim/blob/main/lua/astronvim/utils/init.lua
           local system_open = function(path)
+            -- TODO: REMOVE WHEN DROPPING NEOVIM <0.10
+            if vim.ui.open then return vim.ui.open(path) end
             local cmd
             if vim.fn.has("win32") == 1 and vim.fn.executable("explorer") == 1 then
               cmd = { "cmd.exe", "/K", "explorer" }

@@ -2,10 +2,6 @@
   "lspconfig": {
     "rust_analyzer": {
       "rust-analyzer.assist.emitMustUse": true,
-      "rust-analyzer.cargo.extraArgs": ["--profile", "rust-analyzer"],
-      "rust-analyzer.cargo.extraEnv": {
-        "CARGO_PROFILE_RUST_ANALYZER_INHERITS": "dev"
-      },
       "rust-analyzer.check.command": "clippy",
       "rust-analyzer.debug.openDebugPane": true,
       "rust-analyzer.diagnostics.disabled": ["inactive-code"],
