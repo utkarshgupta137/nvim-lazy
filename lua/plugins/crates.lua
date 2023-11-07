@@ -1,5 +1,5 @@
 return {
-  "saecki/crates.nvim",
+  "Saecki/crates.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   init = function()
     vim.api.nvim_create_autocmd("BufRead", {
