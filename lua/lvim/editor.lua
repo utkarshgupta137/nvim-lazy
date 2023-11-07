@@ -3,7 +3,6 @@ local Util = require("lazyvim.util")
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "7951701fd21291ac473ea92d3fd57ec5c8bf10bb",
     keys = {
       { "<leader>e", "<cmd>Neotree toggle show<cr>", desc = "Toggle Explorer" },
       { "<leader>E", "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
@@ -167,7 +166,7 @@ return {
           vertical = {
             mirror = true,
             prompt_position = "top",
-            preview_height = 0.4,
+            preview_height = 0.5,
           },
           width = 0.90,
           height = 0.90,
