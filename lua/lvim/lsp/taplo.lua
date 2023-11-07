@@ -1,5 +1,5 @@
 return function()
-  require("lazyvim.util").on_attach(function(client, buffer)
+  require("lazyvim.util").lsp.on_attach(function(client, buffer)
     if client.name == "taplo" and vim.fn.expand("%:t") == "Cargo.toml" then
       local crates = require("crates")
       vim.keymap.set("n", "K", function()
