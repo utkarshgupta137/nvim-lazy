@@ -3,6 +3,7 @@
     "rust_analyzer": {
       "rust-analyzer.assist.emitMustUse": true,
       "rust-analyzer.check.command": "clippy",
+      "rust-analyzer.checkOnSave": true,
       "rust-analyzer.debug.openDebugPane": true,
       "rust-analyzer.diagnostics.disabled": ["inactive-code"],
       "rust-analyzer.diagnostics.experimental.enable": true,
