@@ -24,27 +24,23 @@ return {
         },
       },
       filetypes = {
-        help = false,
         ["*"] = true,
       },
     },
   },
 
-  -- Ref: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/coding/copilot.lua
-  {
-    "L3MON4D3/LuaSnip",
-    keys = function() return {} end,
-  },
-
+  -- Ref: https://www.lazyvim.org/extras/coding/copilot
   {
     "nvim-lualine/lualine.nvim",
+    optional = true,
+    event = "VeryLazy",
     opts = function(_, opts)
       local Util = require("lazyvim.util")
       local colors = {
-        [""] = Util.fg("Special"),
-        ["Normal"] = Util.fg("Special"),
-        ["Warning"] = Util.fg("DiagnosticError"),
-        ["InProgress"] = Util.fg("DiagnosticWarn"),
+        [""] = Util.ui.fg("Special"),
+        ["Normal"] = Util.ui.fg("Special"),
+        ["Warning"] = Util.ui.fg("DiagnosticError"),
+        ["InProgress"] = Util.ui.fg("DiagnosticWarn"),
       }
       table.insert(opts.sections.lualine_x, 2, {
         function()
@@ -53,10 +49,19 @@ return {
           return icon .. (status.message or "")
         end,
         cond = function()
-          local ok, clients = pcall(vim.lsp.get_active_clients, { name = "copilot", bufnr = 0 })
+          if not package.loaded["copilot"] then
+            return
+          end
+          local ok, clients = pcall(require("lazyvim.util").lsp.get_clients, { name = "copilot", bufnr = 0 })
+          if not ok then
+            return false
+          end
           return ok and #clients > 0
         end,
         color = function()
+          if not package.loaded["copilot"] then
+            return
+          end
           local status = require("copilot.api").status.data
           return colors[status.status] or colors[""]
         end,
@@ -64,7 +69,14 @@ return {
     end,
   },
 
-  -- Ref: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
+  -- Ref: https://www.lazyvim.org/configuration/recipes#supertab
+  {
+    "L3MON4D3/LuaSnip",
+    keys = function()
+      return {}
+    end,
+  },
+
   {
     "hrsh7th/nvim-cmp",
     ---@param opts cmp.ConfigSchema
