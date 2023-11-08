@@ -6,6 +6,7 @@ return {
   opts = {
     -- Map of filetype to formatters
     formatters_by_ft = {
+      nix = {},
       rust = {},
       -- Use the "_" filetype to run formatters on filetypes that don't
       -- have other formatters configured.
