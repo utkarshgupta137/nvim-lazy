@@ -16,7 +16,7 @@ return {
         function() vim.lsp.buf.code_action({ context = { only = { "quickfix" } }, apply = true }) end,
         desc = "QuickFix Code Action",
       }
-      keys[#keys + 1] = { "<leader>ln", "<cmd>ConformInfo<cr>", desc = "Confirm Info" }
+      keys[#keys + 1] = { "<leader>lc", "<cmd>ConformInfo<cr>", desc = "Conform Info" }
     end,
     ---@class PluginLspOpts
     opts = {
@@ -51,7 +51,7 @@ return {
     },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        -- null-ls
+        -- conform
         "actionlint",
         "dprint",
         "isort",
