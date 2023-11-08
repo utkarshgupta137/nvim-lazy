@@ -1,6 +1,5 @@
 return {
-  "MunifTanjim/rust-tools.nvim",
-  branch = "patched",
+  "simrat39/rust-tools.nvim",
   keys = {
     { "Ra", "<cmd>RustCodeAction<cr>", desc = "Code Action" },
     { "Rs", "<cmd>RustSSR<cr>", desc = "Structural Search & Replace" },
@@ -47,6 +46,16 @@ return {
         end
       end,
       desc = "Toggle Check Command",
+    },
+  },
+  config = {
+    tools = { -- rust-tools options
+      -- These apply to the default RustSetInlayHints command
+      inlay_hints = {
+        -- automatically set inlay hints (type hints)
+        -- default: true
+        auto = false,
+      },
     },
   },
 }

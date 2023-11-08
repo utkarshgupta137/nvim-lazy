@@ -38,11 +38,6 @@ return {
         taplo = {},
         yamlls = {},
       },
-      ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
-      setup = {
-        rust_analyzer = require("lvim.lsp.rust-tools"),
-        taplo = require("lvim.lsp.taplo"),
-      },
     },
   },
 
