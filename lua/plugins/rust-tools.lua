@@ -48,7 +48,7 @@ return {
       desc = "Toggle Check Command",
     },
   },
-  config = {
+  opts = {
     tools = { -- rust-tools options
       -- These apply to the default RustSetInlayHints command
       inlay_hints = {
