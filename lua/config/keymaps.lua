@@ -35,8 +35,6 @@ map({ "n", "v", "i" }, "<C-r>", "<cmd>w<cr><esc><cmd>source<cr>", { desc = "Save
 map("n", "<M-f>", "<cmd>ToggleDeco<cr>", { desc = "Toggle Indents & Rainbow" })
 map("n", "<leader>nr", vim.diagnostic.reset, { desc = "Reset Diagnostics" })
 
-map("n", "<leader>C", "<C-w>c", { desc = "Close Window" })
-
 map({ "n", "v" }, "J", "mzJ`z", { desc = "Join Lines (keep cursor)" })
 
 map({ "n", "v" }, "U", "<C-r>", { desc = "Redo" })
@@ -87,19 +85,8 @@ map("v", "<C-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 pcall(vim.keymap.del, "n", "<leader>`")
 map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
-pcall(vim.keymap.del, "n", "<leader>l")
-map("n", "<leader>nl", "<cmd>Lazy<cr>", { desc = "Lazy" })
-
-pcall(vim.keymap.del, "n", "<leader>L")
-map("n", "<leader>nL", function() Util.news.changelog() end, { desc = "LazyVim Changelog" })
-
 pcall(vim.keymap.del, "n", "<leader>qq")
 map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit" })
-
-pcall(vim.keymap.del, { "n", "v" }, "<leader>cf")
-map({ "n", "v" }, "<leader>lf", function() Util.format({ force = true }) end, { desc = "Format" })
-
-pcall(vim.keymap.del, "n", "<leader>cd")
 
 pcall(vim.keymap.del, "n", "<leader>ww")
 pcall(vim.keymap.del, "n", "<leader>wd")

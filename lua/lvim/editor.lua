@@ -190,10 +190,8 @@ return {
     "folke/which-key.nvim",
     opts = function(_, opts)
       opts.defaults["<leader>q"] = nil
-      opts.defaults["<leader>c"] = nil
       opts.defaults["<leader>w"] = nil
       opts.defaults["<leader>n"] = { name = "+neovim" }
-      opts.defaults["<leader>l"] = { name = "+lsp" }
       opts.defaults["<leader>S"] = { name = "+session" }
       opts.defaults["R"] = { name = "+rust" }
       opts.defaults["RC"] = { name = "+crates" }
@@ -204,12 +202,5 @@ return {
       opts.defaults["gl"] = { name = "+text-case (LSP rename)" }
       return opts
     end,
-  },
-
-  {
-    "echasnovski/mini.bufremove",
-    keys = {
-      { "<leader>c", '<cmd>lua require("mini.bufremove").delete(0, false)<cr>', desc = "Delete Buffer" },
-    },
   },
 }

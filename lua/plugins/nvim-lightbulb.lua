@@ -1,6 +1,13 @@
 return {
   "kosayoda/nvim-lightbulb",
   event = "LspAttach",
+  keys = {
+    {
+      "<leader>cq",
+      function() vim.lsp.buf.code_action({ context = { only = { "quickfix" } }, apply = true }) end,
+      desc = "QuickFix Code Action",
+    },
+  },
   opts = {
     -- Priority of the lightbulb for all handlers except float.
     priority = 100,
