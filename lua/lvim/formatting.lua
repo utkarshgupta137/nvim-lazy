@@ -9,4 +9,13 @@ return {
       desc = "Format Injected Langs",
     },
   },
+  opts = {
+    -- Map of filetype to formatters
+    formatters_by_ft = {
+      rust = {},
+      -- Use the "_" filetype to run formatters on filetypes that don't
+      -- have other formatters configured.
+      ["_"] = { "dprint" },
+    },
+  },
 }
