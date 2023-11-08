@@ -90,6 +90,9 @@ map("n", "<leader><leader>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" }
 pcall(vim.keymap.del, "n", "<leader>l")
 map("n", "<leader>nl", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
+pcall(vim.keymap.del, "n", "<leader>L")
+map("n", "<leader>nL", function() Util.news.changelog() end, { desc = "LazyVim Changelog" })
+
 pcall(vim.keymap.del, "n", "<leader>qq")
 map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit" })
 
@@ -100,6 +103,8 @@ map(
   function() require("lazyvim.plugins.lsp.format").format({ force = true }) end,
   { desc = "Format" }
 )
+
+pcall(vim.keymap.del, "n", "<leader>cd")
 
 pcall(vim.keymap.del, "n", "<leader>ww")
 pcall(vim.keymap.del, "n", "<leader>wd")
