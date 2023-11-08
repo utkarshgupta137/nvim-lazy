@@ -28,8 +28,8 @@ return {
   {
     "folke/neoconf.nvim",
     keys = {
-      { "<leader>nc", "<cmd>Neoconf local<cr>", desc = "Neoconf (local)" },
-      { "<leader>nC", "<cmd>Neoconf global<cr>", desc = "Neoconf (global)" },
+      { "<leader>cn", "<cmd>Neoconf local<cr>", desc = "Neoconf (local)" },
+      { "<leader>cN", "<cmd>Neoconf global<cr>", desc = "Neoconf (global)" },
     },
   },
 

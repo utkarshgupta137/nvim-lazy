@@ -191,7 +191,6 @@ return {
     opts = function(_, opts)
       opts.defaults["<leader>q"] = nil
       opts.defaults["<leader>w"] = nil
-      opts.defaults["<leader>n"] = { name = "+neovim" }
       opts.defaults["<leader>S"] = { name = "+session" }
       opts.defaults["R"] = { name = "+rust" }
       opts.defaults["RC"] = { name = "+crates" }
