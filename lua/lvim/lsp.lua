@@ -38,9 +38,11 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         -- conform
-        "actionlint",
         "dprint",
         "shellharden",
+
+        -- nvim-lint
+        "actionlint",
       })
     end,
   },
