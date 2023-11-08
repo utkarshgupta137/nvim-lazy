@@ -23,7 +23,6 @@ return {
       ---@type lspconfig.options
       servers = {
         bashls = {},
-        marksman = {},
         pyright = {
           settings = {
             python = {
@@ -32,10 +31,6 @@ return {
           },
         },
         rnix = {},
-        ruff_lsp = {},
-        rust_analyzer = {},
-        taplo = {},
-        yamlls = {},
       },
     },
   },
@@ -58,7 +53,6 @@ return {
       vim.list_extend(opts.ensure_installed, {
         -- null-ls
         "actionlint",
-        "black",
         "dprint",
         "isort",
         "shellcheck",
@@ -66,8 +60,6 @@ return {
 
         -- nvim-dap
         "bash-debug-adapter",
-        "codelldb",
-        "debugpy",
       })
     end,
   },
