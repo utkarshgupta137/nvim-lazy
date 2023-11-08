@@ -24,6 +24,6 @@ return {
   },
   config = function(_, opts)
     require("persisted").setup(opts)
-    vim.fn.timer_start(250, function() vim.cmd("Neotree toggle show") end)
+    vim.fn.timer_start(500, function() vim.cmd("Neotree toggle show") end)
   end,
 }
