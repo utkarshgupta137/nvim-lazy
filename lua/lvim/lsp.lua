@@ -56,9 +56,6 @@ return {
         "dprint",
         "shellcheck",
         "shellharden",
-
-        -- nvim-dap
-        "bash-debug-adapter",
       })
     end,
   },
