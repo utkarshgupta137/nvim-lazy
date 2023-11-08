@@ -54,7 +54,6 @@ return {
         -- conform
         "actionlint",
         "dprint",
-        "isort",
         "shellcheck",
         "shellharden",
 
