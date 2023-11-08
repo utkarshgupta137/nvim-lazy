@@ -97,12 +97,7 @@ pcall(vim.keymap.del, "n", "<leader>qq")
 map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit" })
 
 pcall(vim.keymap.del, { "n", "v" }, "<leader>cf")
-map(
-  { "n", "v" },
-  "<leader>lf",
-  function() require("lazyvim.plugins.lsp.format").format({ force = true }) end,
-  { desc = "Format" }
-)
+map({ "n", "v" }, "<leader>lf", function() Util.format({ force = true }) end, { desc = "Format" })
 
 pcall(vim.keymap.del, "n", "<leader>cd")
 
