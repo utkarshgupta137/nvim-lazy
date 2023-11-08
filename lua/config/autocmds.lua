@@ -9,5 +9,5 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 vim.api.nvim_create_user_command("ToggleDeco", function()
   vim.cmd("IBLToggle")
-  vim.cmd("TSToggle rainbow")
+  require("rainbow-delimiters").toggle()
 end, { desc = "Toggle Indents & Rainbow" })
