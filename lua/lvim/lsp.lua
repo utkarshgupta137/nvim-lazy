@@ -23,6 +23,7 @@ return {
       ---@type lspconfig.options
       servers = {
         bashls = {},
+        nil_ls = {},
         pyright = {
           settings = {
             python = {
@@ -30,7 +31,6 @@ return {
             },
           },
         },
-        rnix = {},
       },
     },
   },
