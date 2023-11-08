@@ -40,7 +40,6 @@ return {
         -- conform
         "actionlint",
         "dprint",
-        "shellcheck",
         "shellharden",
       })
     end,
