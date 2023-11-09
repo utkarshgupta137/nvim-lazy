@@ -3,29 +3,13 @@
     "nil_ls": {
       "nil": {
         "formatting": {
-          // External formatter command (with arguments).
-          // It should accepts file content in stdin and print the formatted code into stdout.
-          // Type: [string] | null
-          // Example: ["nixpkgs-fmt"]
           "command": ["nixpkgs-fmt"]
         },
         "diagnostics": {
-          // Ignored diagnostic kinds.
-          // The kind identifier is a snake_cased_string usually shown together
-          // with the diagnostic message.
-          // Type: [string]
-          // Example: ["unused_binding", "unused_with"]
           "ignored": ["unused_binding"]
         },
         "nix": {
           "flake": {
-            // Auto-archiving behavior which may use network.
-            //
-            // - null: Ask every time.
-            // - true: Automatically run `nix flake archive` when necessary.
-            // - false: Do not archive. Only load inputs that are already on disk.
-            // Type: null | boolean
-            // Example: true
             "autoArchive": true
           }
         }
