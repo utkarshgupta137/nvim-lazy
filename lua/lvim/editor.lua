@@ -151,7 +151,7 @@ return {
       { "<leader>,", false },
       { "<leader>/", false },
       { "<leader>:", false },
-      { "<leader>v", Util.telescope("resume"), desc = "Telescope Resume" },
+      { "<leader>n", Util.telescope("resume"), desc = "Telescope Resume" },
       { "<leader>fo", Util.telescope("oldfiles"), desc = "Recent (root dir)" },
       { "<leader>fO", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
     },
@@ -201,5 +201,12 @@ return {
       opts.defaults["gl"] = { name = "+text-case (LSP rename)" }
       return opts
     end,
+  },
+
+  {
+    "echasnovski/mini.bufremove",
+    keys = {
+      { "<leader>v", '<cmd>lua require("mini.bufremove").delete(0, false)<cr>', desc = "Delete Buffer" },
+    },
   },
 }
