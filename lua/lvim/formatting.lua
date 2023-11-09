@@ -15,6 +15,11 @@ return {
     },
     -- Custom formatters and changes to built-in formatters
     formatters = {
+      dprint = {
+        -- When inherit = true, add these additional arguments to the command.
+        -- This can also be a function, like args
+        prepend_args = { "--config", vim.env.XDG_CONFIG_HOME .. "/nvim/dprint.json" },
+      },
       shfmt = {
         -- The base args are { "-filename", "$FILENAME" } so the final args will be
         -- { "-i", "2", "-filename", "$FILENAME" }
