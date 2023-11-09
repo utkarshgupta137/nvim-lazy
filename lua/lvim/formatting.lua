@@ -6,11 +6,12 @@ return {
   opts = {
     -- Map of filetype to formatters
     formatters_by_ft = {
-      nix = {},
-      rust = {},
-      -- Use the "_" filetype to run formatters on filetypes that don't
-      -- have other formatters configured.
-      ["_"] = { "dprint" },
+      ["json"] = { "dprint" },
+      ["jsonc"] = { "dprint" },
+      ["markdown"] = { "dprint" },
+      ["markdown.mdx"] = { "dprint" },
+      ["toml"] = { "dprint" },
+      ["yaml"] = { "dprint" },
     },
     -- Custom formatters and changes to built-in formatters
     formatters = {
