@@ -9,5 +9,4 @@ data
 .luarc.json
 lazy-lock.json
 lazyvim.json
-usage_data.json
 lua/plugins/sqlite.lua
