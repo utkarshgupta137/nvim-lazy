@@ -7,6 +7,16 @@ vim.api.nvim_create_autocmd("TermOpen", {
   command = "setlocal winhighlight=Normal:NormalDark",
 })
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  desc = "Auto select virtualenv Nvim open",
+  pattern = "*",
+  callback = function()
+    local venv = vim.fn.findfile("pyproject.toml", vim.fn.getcwd() .. ";")
+    if venv ~= "" then require("venv-selector").retrieve_from_cache() end
+  end,
+  once = true,
+})
+
 vim.api.nvim_create_user_command("ToggleDeco", function()
   vim.cmd("IBLToggle")
   require("rainbow-delimiters").toggle()

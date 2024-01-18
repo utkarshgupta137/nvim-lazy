@@ -14,13 +14,6 @@ return {
       servers = {
         bashls = {},
         nil_ls = {},
-        pyright = {
-          settings = {
-            python = {
-              pythonPath = vim.g.python3_host_prog,
-            },
-          },
-        },
       },
     },
   },
