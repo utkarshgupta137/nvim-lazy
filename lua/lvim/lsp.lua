@@ -34,6 +34,10 @@ return {
         "dprint",
         "shellharden",
 
+        -- jsonnet
+        "jsonnet-language-server",
+        "jsonnetfmt",
+
         -- nvim-lint
         "actionlint",
       })
