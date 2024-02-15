@@ -10,6 +10,7 @@ return {
       ["jsonc"] = { "dprint" },
       ["markdown"] = { "dprint" },
       ["markdown.mdx"] = { "dprint" },
+      ["sql"] = { "dprint" },
       ["toml"] = { "dprint" },
       ["yaml"] = { "dprint" },
     },
