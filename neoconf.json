@@ -57,6 +57,7 @@
       "rust-analyzer.workspace.symbol.search.limit": 1024
     },
     "yamlls": {
+      "yaml.format.printWidth": 100,
       "yaml.validate": false
     }
   }
