@@ -19,7 +19,7 @@ return {
       shfmt = {
         -- The base args are { "-filename", "$FILENAME" } so the final args will be
         -- { "-i", "2", "-filename", "$FILENAME" }
-        prepend_args = { "-i", "2" },
+        prepend_args = { "-s", "-i", "2", "-bn", "-ci" },
       },
     },
   },
