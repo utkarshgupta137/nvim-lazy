@@ -78,6 +78,7 @@ return {
       ["@lsp.type.typeParameter"] = { fg = "$white" },
       ["@lsp.type.variable"] = { fg = "$cream" },
       ["@lsp.typemod.enumMember.defaultLibrary"] = { fg = "$yellow" },
+      ["@lsp.typemod.keyword.constant"] = { fg = "$purple" },
     },
   },
 }
