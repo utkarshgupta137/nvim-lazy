@@ -1,13 +1,6 @@
 return {
   "mrcjkb/rustaceanvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "mfussenegger/nvim-dap",
-    {
-      "lvimuser/lsp-inlayhints.nvim",
-      opts = {},
-    },
-  },
+  enabled = false,
   keys = {
     { "Ra", "<cmd>RustLsp codeAction<cr>", desc = "Code Action" },
     { "Rs", "<cmd>RustLsp ssr<cr>", desc = "Structural Search & Replace" },
