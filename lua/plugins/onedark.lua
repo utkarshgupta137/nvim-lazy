@@ -61,7 +61,6 @@ return {
       ["@type.qualifier"] = { fg = "$purple" },
       ["@variable"] = { fg = "$cream" },
 
-      ["@lsp.mod.constant"] = { fg = "$orange" },
       ["@lsp.mod.mutable"] = { fmt = "bold,underline" },
       ["@lsp.type.attributeBracket"] = { fg = "$white" },
       ["@lsp.type.builtinType"] = { fg = "$blue" },
@@ -79,6 +78,7 @@ return {
       ["@lsp.type.variable"] = { fg = "$cream" },
       ["@lsp.typemod.enumMember.defaultLibrary"] = { fg = "$yellow" },
       ["@lsp.typemod.keyword.constant"] = { fg = "$purple" },
+      ["@lsp.typemod.variable.constant"] = { fg = "$orange" },
     },
   },
 }
