@@ -172,6 +172,11 @@ return {
           height = 0.90,
           preview_cutoff = 0,
         },
+        path_display = {
+          filename_first = {
+            reverse_directories = true,
+          },
+        },
         sorting_strategy = "ascending",
         selection_strategy = "follow",
       },
