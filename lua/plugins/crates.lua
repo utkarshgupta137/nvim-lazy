@@ -43,5 +43,6 @@ return {
     { "RCR", '<cmd>lua require("crates").open_repository()<cr>', desc = "Open Repository" },
     { "RCD", '<cmd>lua require("crates").open_documentation()<cr>', desc = "Open Documentation" },
     { "RCC", '<cmd>lua require("crates").open_crates_io()<cr>', desc = "Open Crates.io" },
+    { "RCL", '<cmd>lua require("crates").open_lib_rs()<cr>', desc = "Open Lib.rs" },
   },
 }
