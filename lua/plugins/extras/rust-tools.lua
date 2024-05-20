@@ -1,4 +1,11 @@
 return {
+  recommended = function()
+    return LazyVim.extras.wants({
+      ft = "rust",
+      root = { "Cargo.toml", "rust-project.json" },
+    })
+  end,
+
   -- Extend auto completion
   {
     "hrsh7th/nvim-cmp",
@@ -24,9 +31,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
-      end
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
     end,
   },
 
@@ -35,13 +41,15 @@ return {
     "williamboman/mason.nvim",
     optional = true,
     opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then vim.list_extend(opts.ensure_installed, { "codelldb" }) end
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, { "codelldb" })
     end,
   },
 
   {
     "simrat39/rust-tools.nvim",
     lazy = true,
+    ft = "rust",
     opts = function()
       local ok, mason_registry = pcall(require, "mason-registry")
       local adapter ---@type any
@@ -97,7 +105,9 @@ return {
               cargo = {
                 allFeatures = true,
                 loadOutDirsFromCheck = true,
-                runBuildScripts = true,
+                buildScripts = {
+                  enable = true,
+                },
               },
               -- Add clippy lints for Rust.
               checkOnSave = {
