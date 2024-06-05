@@ -81,6 +81,7 @@ map("n", "<leader>q", "<cmd>qa<cr>", { desc = "Quit" })
 
 pcall(vim.keymap.del, "n", "<leader>ww")
 pcall(vim.keymap.del, "n", "<leader>wd")
+pcall(vim.keymap.del, "n", "<leader>wm")
 pcall(vim.keymap.del, "n", "<leader>w-")
 pcall(vim.keymap.del, "n", "<leader>w|")
 pcall(vim.keymap.del, "n", "<leader>-")
