@@ -1,5 +1,3 @@
-local Util = require("lazyvim.util")
-
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -151,9 +149,9 @@ return {
       { "<leader>,", false },
       { "<leader>/", false },
       { "<leader>:", false },
-      { "<leader>n", Util.telescope("resume"), desc = "Telescope Resume" },
-      { "<leader>fo", Util.telescope("oldfiles"), desc = "Recent (root dir)" },
-      { "<leader>fO", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
+      { "<leader>n", "<cmd>Telescope resume<cr>", desc = "Telescope Resume" },
+      { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Recent (root dir)" },
+      { "<leader>fO", LazyVim.pick("oldfiles", { cwd = vim.uv.cwd() }), desc = "Recent (cwd)" },
     },
     dependencies = {
       "nvim-telescope/telescope-frecency.nvim",
