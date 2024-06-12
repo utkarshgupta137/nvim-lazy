@@ -17,6 +17,7 @@
     },
     "rust_analyzer": {
       "rust-analyzer.assist.emitMustUse": true,
+      "rust-analyzer.cargo.features": "all",
       "rust-analyzer.check.command": "clippy",
       "rust-analyzer.checkOnSave": true,
       "rust-analyzer.debug.openDebugPane": true,
