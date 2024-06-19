@@ -2,9 +2,6 @@
   "lspconfig": {
     "nil_ls": {
       "nil": {
-        "formatting": {
-          "command": ["nixpkgs-fmt"]
-        },
         "diagnostics": {
           "ignored": ["unused_binding"]
         },
