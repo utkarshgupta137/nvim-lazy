@@ -86,7 +86,7 @@ pcall(vim.keymap.del, "n", "<leader>w-")
 pcall(vim.keymap.del, "n", "<leader>w|")
 pcall(vim.keymap.del, "n", "<leader>-")
 pcall(vim.keymap.del, "n", "<leader>|")
-map({ "n", "v", "s" }, "<leader>w", "<cmd>w<cr><esc>", { desc = "Save file" })
+map({ "n", "v", "s" }, "<leader>w", "<cmd>w<cr><esc>", { desc = "Save" })
 map("n", "|", "<C-W>v", { desc = "Split window right" })
 map("n", "\\", "<C-W>s", { desc = "Split window below" })
 

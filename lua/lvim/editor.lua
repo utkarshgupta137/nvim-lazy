@@ -191,19 +191,20 @@ return {
 
   {
     "folke/which-key.nvim",
-    opts = function(_, opts)
-      opts.defaults["<leader>q"] = nil
-      opts.defaults["<leader>w"] = nil
-      opts.defaults["<leader>S"] = { name = "+session" }
-      opts.defaults["R"] = { name = "+rust" }
-      opts.defaults["RC"] = { name = "+crates" }
-      opts.defaults["s"] = { name = "+surround" }
-      opts.defaults["gs"] = { name = "+splitjoin" }
-      opts.defaults["gt"] = { name = "+text-case (word)" }
-      opts.defaults["go"] = { name = "+text-case (operator)" }
-      opts.defaults["gl"] = { name = "+text-case (LSP rename)" }
-      return opts
-    end,
+    opts = {
+      spec = {
+        { "<leader>q", desc = "Quit" },
+        { "<leader>w", desc = "Save" },
+        { "<leader>S", group = "session" },
+        { "R", group = "rust" },
+        { "RC", group = "crates" },
+        { "gl", group = "text-case (LSP rename)" },
+        { "go", group = "text-case (operator)" },
+        { "gs", group = "splitjoin" },
+        { "gt", group = "text-case (word)" },
+        { "s", group = "surround" },
+      },
+    },
   },
 
   {
