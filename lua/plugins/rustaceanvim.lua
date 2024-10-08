@@ -2,33 +2,33 @@ return {
   "mrcjkb/rustaceanvim",
   enabled = false,
   keys = {
-    { "Ra", "<cmd>RustLsp codeAction<cr>", desc = "Code Action" },
-    { "Rs", "<cmd>RustLsp ssr<cr>", desc = "Structural Search & Replace" },
+    { "<leader>Ra", "<cmd>RustLsp codeAction<cr>", desc = "Code Action" },
+    { "<leader>Rs", "<cmd>RustLsp ssr<cr>", desc = "Structural Search & Replace" },
 
-    { "Rh", "<cmd>RustLsp hover action<cr>", desc = "Hover Actions" },
-    { "RH", "<cmd>RustLsp hover range<cr>", desc = "Hover Range" },
-    { "Re", "<cmd>RustLsp expandMacro<cr>", desc = "Expand Macro" },
-    { "Ro", "<cmd>RustLsp externalDocs<cr>", desc = "Open External Docs" },
+    { "<leader>Rh", "<cmd>RustLsp hover action<cr>", desc = "Hover Actions" },
+    { "<leader>RH", "<cmd>RustLsp hover range<cr>", desc = "Hover Range" },
+    { "<leader>Re", "<cmd>RustLsp expandMacro<cr>", desc = "Expand Macro" },
+    { "<leader>Ro", "<cmd>RustLsp externalDocs<cr>", desc = "Open External Docs" },
 
-    { "Rw", "<cmd>RustLsp workspaceSymbol<cr>", desc = "Workspace Symbol" },
-    { "RD", "<cmd>RustLsp debuggables<cr>", desc = "Debuggables" },
-    { "Rd", "<cmd>RustLsp! debuggables<cr>", desc = "Last debuggable" },
-    { "RR", "<cmd>RustLsp testables<cr>", desc = "Testables" },
-    { "Rt", "<cmd>RustLsp! testables<cr>", desc = "Last testable" },
-    { "RR", "<cmd>RustLsp runnables<cr>", desc = "Runnables" },
-    { "Rr", "<cmd>RustLsp! runnables<cr>", desc = "Last runnable" },
+    { "<leader>Rw", "<cmd>RustLsp workspaceSymbol<cr>", desc = "Workspace Symbol" },
+    { "<leader>RD", "<cmd>RustLsp debuggables<cr>", desc = "Debuggables" },
+    { "<leader>Rd", "<cmd>RustLsp! debuggables<cr>", desc = "Last debuggable" },
+    { "<leader>RR", "<cmd>RustLsp testables<cr>", desc = "Testables" },
+    { "<leader>Rt", "<cmd>RustLsp! testables<cr>", desc = "Last testable" },
+    { "<leader>RR", "<cmd>RustLsp runnables<cr>", desc = "Runnables" },
+    { "<leader>Rr", "<cmd>RustLsp! runnables<cr>", desc = "Last runnable" },
 
-    { "Rp", "<cmd>RustLsp parentModule<cr>", desc = "Parent Module" },
-    { "RJ", "<cmd>RustLsp joinLines<cr>", desc = "Join Lines" },
-    { "Rj", "<cmd>RustLsp moveItem down<cr>", desc = "Move Item Down" },
-    { "Rk", "<cmd>RustLsp moveItem up<cr>", desc = "Move Item Up" },
+    { "<leader>Rp", "<cmd>RustLsp parentModule<cr>", desc = "Parent Module" },
+    { "<leader>RJ", "<cmd>RustLsp joinLines<cr>", desc = "Join Lines" },
+    { "<leader>Rj", "<cmd>RustLsp moveItem down<cr>", desc = "Move Item Down" },
+    { "<leader>Rk", "<cmd>RustLsp moveItem up<cr>", desc = "Move Item Up" },
 
-    { "Rw", "<cmd>RustLsp reloadWorkspace<cr>", desc = "Reload Workspace" },
-    { "RCo", "<cmd>RustLsp openCargo<cr>", desc = "Open Cargo.toml" },
-    { "RCv", "<cmd>RustLsp crateGraph<cr>", desc = "View Crate Graph" },
+    { "<leader>Rw", "<cmd>RustLsp reloadWorkspace<cr>", desc = "Reload Workspace" },
+    { "<leader>RCo", "<cmd>RustLsp openCargo<cr>", desc = "Open Cargo.toml" },
+    { "<leader>RCv", "<cmd>RustLsp crateGraph<cr>", desc = "View Crate Graph" },
 
     {
-      "Rc",
+      "<leader>Rc",
       function()
         local clients = vim.lsp.get_active_clients()
         for _, client in ipairs(clients) do
