@@ -15,6 +15,7 @@ return {
       servers = {
         bashls = {},
         nil_ls = {},
+        rust_analyzer = { enabled = true },
       },
     },
   },
