@@ -195,7 +195,6 @@ return {
       spec = {
         { "<leader>q", desc = "Quit" },
         { "<leader>w", desc = "Save" },
-        { "<leader>wm", hidden = true },
         { "<leader>S", group = "session" },
         { "<leader>R", group = "rust" },
         { "<leader>C", group = "crates" },

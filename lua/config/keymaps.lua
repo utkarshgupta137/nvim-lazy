@@ -87,3 +87,6 @@ map({ "n", "v", "s" }, "<leader>w", "<cmd>w<cr><esc>", { desc = "Save" })
 map("n", "|", "<C-W>v", { desc = "Split window right" })
 map("n", "\\", "<C-W>s", { desc = "Split window below" })
 
+require("which-key").add({
+  { "<leader>wm", hidden = true },
+})
