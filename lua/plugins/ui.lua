@@ -4,6 +4,7 @@ return {
     opts = {
       options = {
         show_buffer_close_icons = false,
+        persist_buffer_sort = false,
         separator_style = "slope",
         always_show_bufferline = true,
       },
