@@ -1,3 +1,8 @@
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  command = "Neotree show",
+})
+
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
