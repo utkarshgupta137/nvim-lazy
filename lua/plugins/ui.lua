@@ -23,4 +23,10 @@ return {
   {
     "nvim-telescope/telescope.nvim",
   },
+
+  {
+    "bartek/epochconverter.nvim",
+    event = "BufEnter",
+    config = true,
+  },
 }
